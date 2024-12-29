@@ -5,6 +5,7 @@ var myFullpage = new fullpage("#fullpage", {
   // Equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
   // easingcss3: "cubic-bezier(0.175, 0.885, 0.320, 1.275)",
   easingcss3: "cubic-bezier(0, 0.55, 0.45, 1)",
+  touch: true, // Enable touch events
   touchSensitivity: 15,
 
   // Get your license at https://alvarotrigo.com/fullPage/pricing
