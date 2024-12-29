@@ -133,6 +133,10 @@ footer {
   text-align: center;
 }
 
+footer a {
+  color: #f9f9f9;
+}
+
 #container3D {
   position: fixed;
   z-index: 99999;
@@ -144,10 +148,6 @@ footer {
 h1 {
   /* font-size: 4vw; */
   line-height: 1.2;
-}
-
-footer a {
-  color: #f9f9f9;
 }
 
 @media screen and (max-width: 430px) {
