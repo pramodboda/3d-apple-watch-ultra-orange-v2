@@ -160,6 +160,9 @@ footer a {
   .section .text-content h2 {
     font-size: 2rem;
   }
+  .section .text-content p {
+    font-size: 1rem;
+  }
   .section .text-content .typography-callout-stat {
     font-size: 1.5rem;
   }
