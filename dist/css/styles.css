@@ -1,0 +1,175 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* font-family: Arial, sans-serif; */
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #999999;
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  /* font-size: clamp(1rem, 2.5vw, 1.5rem); */
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  --s: 25px;
+  --g: 5px;
+  width: calc(3 * (1.353 * var(--s) + var(--g)));
+  aspect-ratio: 3;
+  background: linear-gradient(#f56900 0 0) left/33% 100% no-repeat,
+    conic-gradient(
+      from -90deg at var(--s) calc(0.353 * var(--s)),
+      #fff 135deg,
+      #666 0 270deg,
+      #aaa 0
+    );
+  background-blend-mode: multiply;
+  --_m: linear-gradient(
+      to bottom right,
+      #0000 calc(0.25 * var(--s)),
+      #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+      #0000 0
+    ),
+    conic-gradient(
+      from -90deg at right var(--g) bottom var(--g),
+      #000 90deg,
+      #0000 0
+    );
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  background-size: calc(100% / 3) 100%;
+  -webkit-mask-size: calc(100% / 3) 100%;
+  mask-size: calc(100% / 3) 100%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  animation: l7 steps(3) 1.5s infinite;
+}
+@keyframes l7 {
+  to {
+    background-position: 150% 0%;
+  }
+}
+
+.section {
+  /* height: 100vh; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+
+  /* font-size: 2em; */
+  /* transition: transform 0.5s ease-in-out; */
+  /* -webkit-transition: transform 0.5s ease-in-out; */
+  transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.section .text-content {
+  padding: 50px 20% 15px 20%;
+}
+
+.section .text-content {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.section .text-content .feature-list {
+  list-style: none;
+}
+.white-text {
+  color: #f9f9f9;
+}
+.orange-text {
+  color: #f56900;
+}
+.section .text-content .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 3rem;
+}
+.section .text-content .feature-list li {
+  margin-bottom: 2.5rem;
+}
+
+.section .text-content h1,
+.section .text-content h2 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: #f9f9f9;
+}
+
+.section .text-content .typography-callout-stat {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#hero {
+  background: #333;
+
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/carbon_fibre.png");
+
+  text-align: center;
+}
+
+#feature1 {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/cartographer.png");
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+#container3D {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  /* width: 50%; */
+  /* border: 1px solid red; */
+}
+h1 {
+  /* font-size: 4vw; */
+  line-height: 1.2;
+}
+
+footer a {
+  color: #f9f9f9;
+}
+
+@media screen and (max-width: 430px) {
+  .section .text-content {
+    padding: 15px 15px 15px 15px;
+  }
+  .section .text-content h1 {
+    font-size: 3rem;
+  }
+  .section .text-content h2 {
+    font-size: 2rem;
+  }
+  .section .text-content .typography-callout-stat {
+    font-size: 1.5rem;
+  }
+  .section .hide-content {
+    display: none;
+  }
+}
