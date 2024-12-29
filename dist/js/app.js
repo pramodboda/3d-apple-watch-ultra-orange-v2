@@ -192,55 +192,55 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 
-// // Scroll navigation
-// document.addEventListener("DOMContentLoaded", function () {
-//   let currentSection = 1;
-//   let totalSections = [...document.querySelectorAll(".section")];
+// Scroll navigation
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSection = 1;
+  let totalSections = [...document.querySelectorAll(".section")];
 
-//   function scrollToSection(section) {
-//     currentSection = section;
-//     document.querySelectorAll(".section").forEach((sec, index) => {
-//       sec.style.transform = `translateY(-${(section - 1) * 100}vh)`;
-//     });
-//   }
+  function scrollToSection(section) {
+    currentSection = section;
+    document.querySelectorAll(".section").forEach((sec, index) => {
+      sec.style.transform = `translateY(-${(section - 1) * 100}vh)`;
+    });
+  }
 
-//   function scrollUp() {
-//     if (currentSection > 1) {
-//       scrollToSection(currentSection - 1);
-//     }
-//   }
+  function scrollUp() {
+    if (currentSection > 1) {
+      scrollToSection(currentSection - 1);
+    }
+  }
 
-//   function scrollDown() {
-//     if (currentSection < totalSections.length) {
-//       scrollToSection(currentSection + 1);
-//     }
-//   }
+  function scrollDown() {
+    if (currentSection < totalSections.length) {
+      scrollToSection(currentSection + 1);
+    }
+  }
 
-//   // Scroll-based navigation controls
-//   document.addEventListener("wheel", (event) => {
-//     if (event.deltaY > 0) {
-//       scrollDown();
-//     } else {
-//       scrollUp();
-//     }
-//   });
+  // // Scroll-based navigation controls
+  // document.addEventListener("wheel", (event) => {
+  //   if (event.deltaY > 0) {
+  //     scrollDown();
+  //   } else {
+  //     scrollUp();
+  //   }
+  // });
 
-//   // Touch scroll navigation (for mobile)
-//   let touchStartY = 0;
-//   let touchEndY = 0;
+  // Touch scroll navigation (for mobile)
+  let touchStartY = 0;
+  let touchEndY = 0;
 
-//   document.addEventListener("touchstart", (event) => {
-//     touchStartY = event.changedTouches[0].screenY;
-//   });
+  document.addEventListener("touchstart", (event) => {
+    touchStartY = event.changedTouches[0].screenY;
+  });
 
-//   document.addEventListener("touchend", (event) => {
-//     touchEndY = event.changedTouches[0].screenY;
-//     if (touchStartY > touchEndY + 50) {
-//       // Swiped up (scroll down)
-//       scrollDown();
-//     } else if (touchStartY < touchEndY - 50) {
-//       // Swiped down (scroll up)
-//       scrollUp();
-//     }
-//   });
-// });
+  document.addEventListener("touchend", (event) => {
+    touchEndY = event.changedTouches[0].screenY;
+    if (touchStartY > touchEndY + 50) {
+      // Swiped up (scroll down)
+      scrollDown();
+    } else if (touchStartY < touchEndY - 50) {
+      // Swiped down (scroll up)
+      scrollUp();
+    }
+  });
+});
