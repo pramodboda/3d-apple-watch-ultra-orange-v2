@@ -123,6 +123,10 @@ body {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/cartographer.png");
 }
 
+#feature8 {
+  position: relative;
+}
+
 footer {
   position: absolute;
   bottom: 1rem;
